@@ -672,7 +672,6 @@ class CspPlant(PowerSource):
         self.gen_max_feasible = self.calc_gen_max_feasible_kwh(interconnect_kw, cap_cred_avail_storage)
         self.capacity_credit_percent = self.calc_capacity_credit_percent(interconnect_kw)
         
-        self._financial_model.value('ppa_soln_mode', 1)
 
         if len(self.generation_profile) == self.site.n_timesteps:
             single_year_gen = self.generation_profile
